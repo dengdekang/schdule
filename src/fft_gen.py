@@ -35,11 +35,11 @@ def fft_gen(file,size):
         fptr.write(str(i*2-1)+":"+get_random()+"  "+str(2*i+1-1)+":"+get_random()+"\n")
     start_num=size
     n_m=2
-    #要交叠的次数
+    #Number of overlaps to be made
     level=0
     idx=0
     for n in range(merge_time):
-        #产生交叠的序列 以2开始 幂乘
+        #Generate an overlapping sequence Starting with 2 Power multiplication
         m=0
         serial=[i for i in range(start_num,start_num+size)]
         for t in range(int(size/n_m)):
